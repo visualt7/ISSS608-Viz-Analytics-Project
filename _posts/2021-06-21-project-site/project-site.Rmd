@@ -1,0 +1,104 @@
+---
+title: "ISSS608 Visual Analytics Project Team 7"
+description: |
+  Project Team.
+author:
+  - name: Yeo Chia Guan Andy, Stella Koh, Alex Ong chee Chong
+date: 06-21-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Distill is a publication format for scientific and technical writing, native to the web.
+
+Learn more about using Distill at <https://rstudio.github.io/distill>.
+
+
+
+
+# Project Proposal 
+
+
+# Overview 
+
+GASTech, a Kronos based company provides company cars for its employees for both personal and business use. Those who are not provided with company cars are allowed to check out trucks for business use. However, those trucks are not allowed for personal use. 
+
+Employees entitled to the company cars are generally happier with the company’s car than their own due to the difference in quality. As such, GASTech does not trust the way employees are using the cars. The company installed geospatial tracking software in the company car to track the car’s movement. 
+
+The vehicle tracking data has been made available to law enforcement to assist in their investigation. However, data is only available two weeks prior to their disappearance.  
+
+To promote local businesses, Kronos based companies provide Kronos Kares benefit card to GASTech employees by giving them discounts and loyalty rewards in exchange for credit card purchases and preferences. These data are given to the law enforcement for their investigation. 
+
+ 
+# Objective 
+
+The objective is to identify the purchases made by the GASTech employees and examine any suspicious behavior in their purchase patterns. 
+
+
+# Motivation 
+To draw relations between the GASTech employee and their purchases and to identify suspicious patterns of behavior. 
+
+
+# Main Features of Application 
+The application should be interactive to allow users to filter out the data to draw better insights like focusing on an individual vehicle ID for its location patterns.  
+
+
+# Problems and Issues to be Addressed 
+1) Varying treatments for missing and outlier data may result in different conclusions. For example, there are gps information for vehicle ID 101-107 which are not tagged to any EmpID. 
+
+2) Different resolutions- Loyalty card data is shown on a monthly basis, while credit card data is shown daily with timestamp included.  
+
+ 
+# Data Source 
+For this project, we will be using data provided in the Vast Challenge 2021, mini challenge 2. 
+
+
+# Approach 
+1) Using the map provided, map out the credit card and loyalty spend using a dot plot overlayed on the map to assess which are the popular locations and during which times. 
+
+2) Identify the geographical location of the vehicle by car ID with respect to time using lat and long data. 
+
+3) Using the composite keys 1) Time, 2) Location and 3) Price to match the credit card number to the loyalty card number. The pair should be consistent. 
+
+4) Determine the location of the shops in the loyalty and cc datasets using Lat and Long data from the GPS data by referencing to time. The vehicle ID that is not tagged to personnel (ID >100) are assumed to be trucks, driven by truck drivers. To determine if the truck has been used for personal use, we examine if the truck was observed to appear at the shops.  
+
+5) Develop an interactive map to detect the location of the cars and trucks to examine whether there is any presence of suspicious activity (E.g., Several cars gathering at the same point at the same date and time etc.).  
+
+ 
+
+# Schedule 
+Tasks Name | Start Date (DD/MM/YY) | End Date (DD/MM/YY) | Assigned To | % Completion 
+ :----:|:------:|:--------:|:-----:|:-----:|
+Formulate Project details | 05/06/21 | 08/06/21 | All | 99.9% 
+Project consultation with Prof | 11/06/21 | 11/06/21 | All | 0%
+Refine project scope and ideas | 12/06/21 | 20/06/21 | All | 0% 
+Complete project proposal and publish on Netlify page | 12/06/21 | 20/06/21 | All | 0% 
+Data Preparation | 21/06/21 | 30/06/21 |All | 0% 
+Draft Application Features | 18/07/21 | 23/07/21 | All | 0%
+Creation of application on R Shiny | 24/07/21 | 31/07/21 | All | 0% 
+Draft Poster Design | 25/07/21 | 31/07/21 | All | 0%
+Application refinement | 01/08/2021 | 14/08/21 | All | 0% 
+Draft final report, including user guide | 01/08/2021 | 14/08/21 | All | 0% 
+Finalise artifact | 01/08/2021 | 14/08/21 | All | 0% 
+Update Netlify | 09/08/2021 | 14/08/21 | All | 0% 
+Submission of final application, user guide, project poster, research paper and artifacts | 15/08/21 | 15/08/21 | All | 0% 
+
+ 
+
+# Packages 
+Shinydashboard 
+Shiny 
+MASS 
+Rstudioapi 
+Tidyverse 
+Leaflet 
+Leaflet.extras 
+Dplyr 
+Sf
+ggplot2 

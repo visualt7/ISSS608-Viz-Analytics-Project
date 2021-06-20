@@ -1,0 +1,12 @@
+name: "ISSS608 Viz Analytics Project"
+title: "ISSS608 Viz Analytics Team 7"
+description: |
+  ISSS608 Viz Analytics Team 7
+output_dir: "_site"
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+output: distill::distill_article
