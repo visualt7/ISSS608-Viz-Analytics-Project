@@ -86,3 +86,4 @@ SGdata_cleaned <- SGdata_cleaned %>%
     No_Conditions = d1_health_99
     
   )
+
