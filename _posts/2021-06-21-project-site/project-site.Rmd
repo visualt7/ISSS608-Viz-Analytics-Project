@@ -4,7 +4,7 @@ description: |
   Project Team.
 author:
   - name: Yeo Chia Guan Andy, Stella Koh, Alex Ong chee Chong
-date: 06-21-2021
+date: 08-10-2021
 output:
   distill::distill_article:
     self_contained: false
@@ -14,11 +14,6 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
-
-Distill is a publication format for scientific and technical writing, native to the web.
-
-Learn more about using Distill at <https://rstudio.github.io/distill>.
-
 
 
 
